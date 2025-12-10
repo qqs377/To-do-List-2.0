@@ -291,18 +291,18 @@ async function saveMessageToSupabase(userName, messageText) {
 }
 
 // Function to delete message from Supabase
-async function deleteMessageFromSupabase(messageId) {
-    try {
-        const { error } = await supabase
-            .from('messages')
-            .delete()
-            .eq('id', messageId);
+//async function deleteMessageFromSupabase(messageId) {
+//    try {
+//        const { error } = await supabase
+//            .from('messages')
+//            .delete()
+//            .eq('id', messageId);
 
-        if (error) throw error;
-    } catch (error) {
-        console.error('Error deleting message:', error);
-    }
-}
+//        if (error) throw error;
+//    } catch (error) {
+//        console.error('Error deleting message:', error);
+//    }
+//}
 
 // Function to post a new message
 async function postMessage() {
@@ -341,12 +341,12 @@ async function postMessage() {
 }
 
 // Function to delete a message
-async function deleteMessage(messageId, messageElement) {
-    if (confirm('Delete this message?')) {
-        await deleteMessageFromSupabase(messageId);
-        messageElement.remove();
-    }
-}
+//async function deleteMessage(messageId, messageElement) {
+//    if (confirm('Delete this message?')) {
+//        await deleteMessageFromSupabase(messageId);
+//        messageElement.remove();
+//    }
+//}
 
 // Run both functions when the page loads
 window.onload = function() {
